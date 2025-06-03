@@ -1,13 +1,525 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="https://miguelneves66.github.io/Borland/favicon.ico">
-    <title>MENU</title>
+    <title>Borland - Soluções Empresariais</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+    </style>
 </head>
-<body>
-    <h1>Borland</h1>
-    <a href="https://borderlands.2k.com/pt-BR/">Site Oficial da Borland</a>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50 transition-all">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-blue-600 flex items-center">
+                <i class="fas fa-cube mr-2"></i> Borland
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#inicio" class="text-gray-700 hover:text-blue-600 transition-all">Início</a>
+                <a href="#servicos" class="text-gray-700 hover:text-blue-600 transition-all">Serviços</a>
+                <a href="#sobre" class="text-gray-700 hover:text-blue-600 transition-all">Sobre Nós</a>
+                <a href="#contato" class="text-gray-700 hover:text-blue-600 transition-all">Contato</a>
+            </div>
+            <button class="md:hidden focus:outline-none" id="menuBtn">
+                <i class="fas fa-bars text-gray-600 text-xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-white w-full px-6 py-4 absolute left-0 shadow-lg" id="mobileMenu">
+            <a href="#inicio" class="block py-2 text-gray-700 hover:text-blue-600 transition-all">Início</a>
+            <a href="#servicos" class="block py-2 text-gray-700 hover:text-blue-600 transition-all">Serviços</a>
+            <a href="#sobre" class="block py-2 text-gray-700 hover:text-blue-600 transition-all">Sobre Nós</a>
+            <a href="#contato" class="block py-2 text-gray-700 hover:text-blue-600 transition-all">Contato</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-gradient text-white py-20 md:py-32">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Soluções Empresariais que Impulsionam seu Negócio</h1>
+                <p class="text-xl mb-8">Na Borland, transformamos desafios em oportunidades com estratégias personalizadas e tecnologias inovadoras.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contato" class="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold text-center transition-all">Fale Conosco</a>
+                    <a href="#servicos" class="border-2 border-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-lg font-semibold text-center transition-all">Nossos Serviços</a>
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Equipe Borland" class="rounded-lg shadow-2xl">
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Clients -->
+    <section class="bg-gray-100 py-12">
+        <div class="container mx-auto px-6">
+            <h2 class="text-center text-gray-500 text-sm uppercase font-semibold mb-8">Parceiros e Clientes</h2>
+            <div class="flex flex-wrap justify-center items-center gap-12 md:gap-16">
+                <div class="text-gray-400 text-3xl font-bold opacity-70 hover:opacity-100 transition-all">TechVision</div>
+                <div class="text-gray-400 text-3xl font-bold opacity-70 hover:opacity-100 transition-all">GlobalNet</div>
+                <div class="text-gray-400 text-3xl font-bold opacity-70 hover:opacity-100 transition-all">InnovaCorp</div>
+                <div class="text-gray-400 text-3xl font-bold opacity-70 hover:opacity-100 transition-all">BlueWay</div>
+                <div class="text-gray-400 text-3xl font-bold opacity-70 hover:opacity-100 transition-all">PrimeSoft</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicos" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Nossos Serviços</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-lg shadow-md p-8 service-card transition-all">
+                    <div class="text-blue-600 text-4xl mb-6">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Desenvolvimento de Software</h3>
+                    <p class="text-gray-600">Soluções personalizadas para automatizar processos, melhorar eficiência e impulsionar seus resultados.</p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white rounded-lg shadow-md p-8 service-card transition-all">
+                    <div class="text-blue-600 text-4xl mb-6">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Consultoria Empresarial</h3>
+                    <p class="text-gray-600">Análises estratégicas para identificar oportunidades de crescimento e melhorar a gestão do seu negócio.</p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white rounded-lg shadow-md p-8 service-card transition-all">
+                    <div class="text-blue-600 text-4xl mb-6">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Migração para a Nuvem</h3>
+                    <p class="text-gray-600">Modernize sua infraestrutura com soluções escaláveis, seguras e que reduzem custos operacionais.</p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-white rounded-lg shadow-md p-8 service-card transition-all">
+                    <div class="text-blue-600 text-4xl mb-6">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Segurança Digital</h3>
+                    <p class="text-gray-600">Proteção completa dos seus dados e sistemas contra ameaças cibernéticas e vulnerabilidades.</p>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="bg-white rounded-lg shadow-md p-8 service-card transition-all">
+                    <div class="text-blue-600 text-4xl mb-6">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Aplicativos Móveis</h3>
+                    <p class="text-gray-600">Desenvolvimento de apps que aproximam sua empresa dos clientes e tornam serviços mais acessíveis.</p>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="bg-white rounded-lg shadow-md p-8 service-card transition-all">
+                    <div class="text-blue-600 text-4xl mb-6">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Inteligência Artificial</h3>
+                    <p class="text-gray-600">Implementação de soluções de IA para análise de dados, automação e tomada de decisões estratégicas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Nosso Compromisso com a Excelência</h2>
+                    <p class="text-gray-600 mb-6">Fundada em 2010, a Borland surgiu da necessidade de oferecer soluções tecnológicas que realmente atendam às demandas do mercado, com agilidade e qualidade superior.</p>
+                    <p class="text-gray-600 mb-8">Nossa equipe é composta por especialistas apaixonados por tecnologia e inovação, sempre buscando as melhores práticas para entregar resultados excepcionais aos nossos clientes.</p>
+                    <div class="flex space-x-6">
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-blue-600">12+</div>
+                            <div class="text-gray-500">Anos no mercado</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-blue-600">450+</div>
+                            <div class="text-gray-500">Projetos concluídos</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-blue-600">95%</div>
+                            <div class="text-gray-500">Clientes satisfeitos</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1590402494587-44b71d7692e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Equipe Borland" class="rounded-lg shadow-xl">
+                        <div class="absolute -bottom-6 -right-6 bg-blue-600 text-white p-6 rounded-lg shadow-lg transform rotate-3 hidden md:block">
+                            <div class="text-2xl font-bold">Desde 2010</div>
+                            <div class="text-sm">Transformando negócios</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-blue-600 text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">O que nossos clientes dizem</h2>
+                <div class="w-20 h-1 bg-white mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white bg-opacity-10 rounded-lg p-8 backdrop-filter backdrop-blur-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-2xl">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="mb-6 italic">"A Borland revolucionou nossa operação com um sistema de gestão personalizado. O atendimento foi impecável e os resultados superaram nossas expectativas."</p>
+                    <div class="flex items-center">
+                        <div class="mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Cliente" class="w-12 h-12 rounded-full">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Ana Luiza Mendes</h4>
+                            <p class="text-sm opacity-80">CEO, TechSolutions</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white bg-opacity-10 rounded-lg p-8 backdrop-filter backdrop-blur-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-2xl">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="mb-6 italic">"Depois de migrar nossa infraestrutura para a nuvem com a Borland, reduzimos custos em 40% e ganhamos muito mais mobilidade e segurança para nossa equipe."</p>
+                    <div class="flex items-center">
+                        <div class="mr-4">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Cliente" class="w-12 h-12 rounded-full">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Ricardo Almeida</h4>
+                            <p class="text-sm opacity-80">Diretor de TI, LogísticaPlus</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white bg-opacity-10 rounded-lg p-8 backdrop-filter backdrop-blur-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-2xl">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="mb-6 italic">"O aplicativo desenvolvido pela Borland aumentou nossas vendas em 25% no primeiro trimestre. Eles entenderam exatamente o que nosso negócio precisava."</p>
+                    <div class="flex items-center">
+                        <div class="mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Cliente" class="w-12 h-12 rounded-full">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Juliana Santos</h4>
+                            <p class="text-sm opacity-80">Gerente Comercial, VivaBem</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Vamos Conversar</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Estamos prontos para entender suas necessidades e oferecer a melhor solução para o seu negócio.</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 mb-2">Seu Nome</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 mb-2">Seu Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent" required>
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-gray-700 mb-2">Telefone</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 mb-2">Mensagem</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent" required></textarea>
+                        </div>
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold w-full transition-all">Enviar Mensagem</button>
+                    </form>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-gray-50 p-8 rounded-lg h-full">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Informações de Contato</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="text-blue-600 text-xl mt-1 mr-4">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Endereço</h4>
+                                    <p class="text-gray-600">Av. Paulista, 1000 - Sala 1501<br>São Paulo - SP, 01310-100</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-blue-600 text-xl mt-1 mr-4">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Telefone</h4>
+                                    <p class="text-gray-600">(11) 1234-5678</p>
+                                    <p class="text-gray-600">(11) 99876-5432 (WhatsApp)</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-blue-600 text-xl mt-1 mr-4">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Email</h4>
+                                    <p class="text-gray-600">contato@borland.com.br</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-blue-600 text-xl mt-1 mr-4">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Horário de Atendimento</h4>
+                                    <p class="text-gray-600">Segunda a Sexta: 08:00 - 18:00</p>
+                                    <p class="text-gray-600">Sábado: 09:00 - 12:00</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-10">
+                            <h4 class="font-bold text-gray-800 mb-4">Siga-nos</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="bg-blue-400 hover:bg-blue-500 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="bg-pink-600 hover:bg-pink-700 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="bg-blue-800 hover:bg-blue-900 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Receba nossas novidades</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto mb-8">Assine nossa newsletter e receba conteúdos exclusivos, dicas e atualizações sobre tecnologia e negócios.</p>
+            
+            <form class="max-w-md mx-auto flex">
+                <input type="email" placeholder="Seu melhor email" class="flex-grow px-4 py-3 rounded-l-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600">
+                <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-r-lg font-semibold transition-all">Assinar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-cube mr-2"></i> Borland
+                    </h3>
+                    <p class="text-gray-400">Soluções tecnológicas inovadoras para impulsionar seu negócio no mercado digital.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#inicio" class="text-gray-400 hover:text-white transition-all">Início</a></li>
+                        <li><a href="#servicos" class="text-gray-400 hover:text-white transition-all">Serviços</a></li>
+                        <li><a href="#sobre" class="text-gray-400 hover:text-white transition-all">Sobre Nós</a></li>
+                        <li><a href="#contato" class="text-gray-400 hover:text-white transition-all">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Serviços</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-all">Desenvolvimento de Software</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-all">Consultoria Empresarial</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-all">Migração para Nuvem</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-all">Segurança Digital</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Contato</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mr-3 mt-1"></i> Av. Paulista, 1000 - SP
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3"></i> (11) 1234-5678
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3"></i> contato@borland.com.br
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 Borland. Todos os direitos reservados.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition-all"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-all"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-all"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-all"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-6 right-6 bg-blue-600 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center transition-all opacity-0 invisible">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                mobileMenu.classList.add('hidden');
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.remove('opacity-0', 'invisible');
+                backToTopBtn.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopBtn.classList.remove('opacity-100', 'visible');
+                backToTopBtn.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Form Submission
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            // Here you would typically send the form data to a server
+            // For demonstration, we'll just show an alert
+            alert(`Obrigado, ${name}! Sua mensagem foi enviada com sucesso. Entraremos em contato em breve.`);
+            
+            // Reset the form
+            contactForm.reset();
+        });
+    </script>
 </body>
 </html>
+
+
+
+
+!DOCTYPE html>
+html lang="en"
+head
+    meta charset="UTF-8"
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+    link rel="icon" type="image/x-icon" href="https://miguelneves66.github.io/Borland/favicon.ico">
+    titleMENU/title
+/head
+body
+    h1>Borland</h1
+    a href="https://borderlands.2k.com/pt-BR/">Site Oficial da Borland</a
+/body
+/html
