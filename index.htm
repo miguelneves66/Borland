@@ -5,40 +5,97 @@
   <title>Borland</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
     }
+
     header {
-      background-color: #1d4ed8;
-      color: white;
-      padding: 20px;
-      text-align: center;
+      background: #fff;
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-    nav {
-      background-color: #f0f0f0;
-      padding: 10px;
-      text-align: center;
+
+    header h1 {
+      color: #1d4ed8;
+      font-size: 24px;
     }
+
     nav a {
-      margin: 0 10px;
+      margin-left: 15px;
       text-decoration: none;
       color: #333;
     }
+
+    .hero {
+      background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 30px;
+    }
+
     section {
       padding: 40px 20px;
-      text-align: center;
+      background: white;
+      margin: 20px;
+      border-radius: 8px;
     }
-    .servico {
-      border: 1px solid #ddd;
-      margin: 10px;
-      padding: 20px;
+
+    .services div {
+      margin-bottom: 20px;
     }
+
     footer {
-      background-color: #333;
-      color: white;
-      padding: 20px;
+      background: #111;
+      color: #ccc;
       text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    #menuToggle {
+      display: none;
+    }
+
+    #backToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #1d4ed8;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+      display: none;
+      cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        display: none;
+        flex-direction: column;
+      }
+
+      #menuToggle {
+        display: inline;
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+      nav.show {
+        display: flex;
+      }
     }
   </style>
 </head>
@@ -46,47 +103,69 @@
 
   <header>
     <h1>Borland</h1>
-    <p>Soluções para seu negócio</p>
+    <span id="menuToggle">☰</span>
+    <nav id="navMenu">
+      <a href="#inicio">Início</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#sobre">Sobre</a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="#inicio">Início</a>
-    <a href="#servicos">Serviços</a>
-    <a href="#sobre">Sobre Nós</a>
-  </nav>
+  <div class="hero" id="inicio">
+    <h2>Soluções Empresariais</h2>
+    <p>Transformamos desafios em oportunidades com tecnologia.</p>
+  </div>
 
-  <section id="inicio">
-    <h2>Bem-vindo à Borland</h2>
-    <p>Ajudamos sua empresa com tecnologia e inovação.</p>
-    <img src="https://via.placeholder.com/400x200" alt="Equipe Borland">
-  </section>
-
-  <section id="servicos">
-    <h2>Nossos Serviços</h2>
-    <div class="servico">
-      <h3>Desenvolvimento de Software</h3>
-      <p>Sistemas personalizados para sua empresa.</p>
+  <section id="servicos" class="services">
+    <h3>Serviços</h3>
+    <div>
+      <strong>Desenvolvimento de Software</strong>
+      <p>Automatize processos com sistemas sob medida.</p>
     </div>
-    <div class="servico">
-      <h3>Consultoria Empresarial</h3>
-      <p>Melhore a gestão com nossos especialistas.</p>
+    <div>
+      <strong>Consultoria Empresarial</strong>
+      <p>Melhore a gestão e cresça com estratégia.</p>
     </div>
-    <div class="servico">
-      <h3>Migração para a Nuvem</h3>
-      <p>Modernize sua infraestrutura.</p>
+    <div>
+      <strong>Inteligência Artificial</strong>
+      <p>Use IA para tomar decisões com base em dados.</p>
     </div>
   </section>
 
   <section id="sobre">
-    <h2>Sobre Nós</h2>
-    <p>A Borland foi fundada em 2010 com foco em tecnologia e resultados.</p>
-    <p>Já entregamos centenas de projetos com alta satisfação dos clientes.</p>
+    <h3>Sobre Nós</h3>
+    <p>A Borland existe desde 2010, entregando soluções que ajudam empresas a crescer usando tecnologia moderna.</p>
   </section>
 
   <footer>
-    <p>Contato: contato@borland.com.br | (11) 1234-5678</p>
-    <p>© 2023 Borland</p>
+    <p>© 2023 Borland. Todos os direitos reservados.</p>
   </footer>
 
+  <button id="backToTop">↑</button>
+
+  <script>
+    // Menu Mobile
+    const toggleBtn = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    toggleBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+    });
+
+    // Botão "Voltar ao Topo"
+    const backToTopBtn = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTopBtn.style.display = 'block';
+      } else {
+        backToTopBtn.style.display = 'none';
+      }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
 </body>
 </html>
