@@ -1,0 +1,142 @@
+:root {
+  --bg: #f9f9f9;
+  --text: #1f1f1f;
+  --primary: #0d1b2a;
+  --secondary: #1b263b;
+  --accent: #00b4d8;
+  --white: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Navigation */
+nav {
+  background: var(--primary);
+  padding: 15px 30px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h1 {
+  color: var(--accent);
+  font-size: 24px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 16px;
+}
+
+nav ul li a:hover {
+  color: var(--accent);
+}
+
+/* General layout */
+header, section {
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 20px;
+}
+
+header {
+  margin-top: 120px;
+}
+
+h2 {
+  font-size: 28px;
+  color: var(--secondary);
+  border-left: 5px solid var(--accent);
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.image {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.timeline {
+  border-left: 4px solid var(--accent);
+  padding-left: 30px;
+  margin-top: 30px;
+  position: relative;
+}
+
+.timeline-event {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.timeline-event::before {
+  content: '';
+  width: 14px;
+  height: 14px;
+  background: var(--accent);
+  border-radius: 50%;
+  position: absolute;
+  left: -38px;
+  top: 4px;
+}
+
+.timeline-event h4 {
+  margin-bottom: 5px;
+  color: var(--primary);
+}
+
+footer {
+  background: var(--primary);
+  color: var(--white);
+  text-align: center;
+  padding: 20px;
+  margin-top: 60px;
+}
+
+/* Responsividade */
+@media (max-width: 700px) {
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header, section {
+    padding: 10px;
+  }
+}
