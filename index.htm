@@ -3,95 +3,98 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Borland – História de Inovação</title>
+  <title>Borland – Inovação que Marcou Época</title>
   <style>
     :root {
       --primary: #0a192f;
       --secondary: #112240;
       --accent: #64ffda;
-      --text: #ccd6f6;
-      --bg-light: #f9f9f9;
-      --white: #ffffff;
+      --light: #f4f4f4;
+      --text: #202b38;
+      --muted: #8892b0;
     }
 
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--bg-light);
-      color: var(--primary);
-      line-height: 1.6;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--light);
+      color: var(--text);
+      line-height: 1.8;
     }
 
     header {
       background: var(--primary);
-      color: var(--text);
-      padding: 20px;
+      color: white;
+      padding: 60px 20px;
       text-align: center;
     }
 
     header h1 {
-      font-size: 36px;
-      margin-bottom: 10px;
+      font-size: 42px;
       color: var(--accent);
+      margin-bottom: 10px;
     }
 
     header p {
-      font-size: 16px;
-      color: var(--text);
+      font-size: 18px;
+      color: #ccd6f6;
     }
 
     section {
-      padding: 60px 20px;
       max-width: 1000px;
-      margin: auto;
+      margin: 60px auto;
+      padding: 0 20px;
     }
 
     section h2 {
-      font-size: 28px;
+      font-size: 30px;
       color: var(--primary);
       margin-bottom: 20px;
-      border-bottom: 2px solid var(--accent);
-      display: inline-block;
-    }
-
-    .timeline {
-      border-left: 4px solid var(--accent);
-      padding-left: 20px;
-      margin-left: 10px;
-    }
-
-    .timeline p {
-      margin-bottom: 25px;
+      border-left: 6px solid var(--accent);
+      padding-left: 12px;
     }
 
     .highlight {
-      background: var(--white);
-      padding: 20px;
+      background-color: white;
       border-left: 5px solid var(--accent);
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      padding: 30px;
       margin-bottom: 40px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-top: 10px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
     }
 
     footer {
       background: var(--primary);
-      color: var(--text);
+      color: #ccd6f6;
       text-align: center;
-      padding: 20px;
-      margin-top: 40px;
+      padding: 30px 20px;
+      margin-top: 80px;
     }
 
     @media (max-width: 600px) {
       header h1 {
-        font-size: 28px;
+        font-size: 32px;
       }
 
       section h2 {
         font-size: 24px;
+      }
+
+      .highlight {
+        padding: 20px;
       }
     }
   </style>
@@ -100,52 +103,58 @@
 
   <header>
     <h1>Borland</h1>
-    <p>Uma revolução silenciosa no mundo da computação pessoal</p>
+    <p>Uma história de inovação, ousadia e transformação tecnológica</p>
   </header>
 
-  <section id="historia">
-    <h2>História da Empresa</h2>
-    <div class="timeline">
-      <p><strong>1983:</strong> Philippe Kahn funda a Borland International, Inc., após emigrar da França para o Vale do Silício com apenas US$ 2.000.</p>
-      <p><strong>Anos 80:</strong> A Borland cresce vendendo ferramentas acessíveis para programadores, como o Turbo Pascal, e torna-se referência entre desenvolvedores.</p>
-      <p><strong>Anos 90:</strong> Com aquisições estratégicas e um estilo de gestão inovador, a Borland migra para o mercado corporativo e se torna a terceira maior empresa de software do mundo.</p>
+  <section>
+    <h2>O Surgimento de uma Lenda</h2>
+    <div class="highlight">
+      <p>A Borland International, Inc. foi uma gigante silenciosa da computação pessoal. Fundada em 1983 por Philippe Kahn, um professor francês de matemática com espírito empreendedor, a Borland transformou o acesso ao desenvolvimento de software ao fornecer ferramentas poderosas e acessíveis para programadores em todo o mundo.</p>
+      <p>Com apenas US$ 2.000 no bolso e grandes ideias na mente, Kahn deixou a França e embarcou rumo ao Vale do Silício, onde construiu a Borland praticamente do zero. Seu objetivo? Democratizar a programação e acelerar a evolução tecnológica.</p>
     </div>
   </section>
 
-  <section id="fundador">
-    <h2>Philippe Kahn</h2>
+  <section>
+    <h2>Philippe Kahn – O Visionário</h2>
     <div class="highlight">
-      <p>Philippe Kahn (1952–2025) foi um engenheiro e inventor francês. Fundador da Borland, é reconhecido por criar o primeiro telefone com câmera integrado em 1997, permitindo o compartilhamento instantâneo de imagens – algo que se tornaria base para os smartphones e redes sociais modernas.</p>
-      <p>Além de empreendedor visionário, Kahn também foi um defensor do acesso acessível à tecnologia, pavimentando o caminho para milhares de desenvolvedores no mundo todo.</p>
+      <p>Philippe Kahn (1952–2025) foi muito mais do que o fundador da Borland. Ele foi um inventor, pioneiro da tecnologia móvel e criador do primeiro telefone celular com câmera integrada, capaz de compartilhar imagens em tempo real – muito antes da ascensão dos smartphones e redes sociais.</p>
+      <p>Sua abordagem disruptiva e humanizada à tecnologia influenciou profundamente o cenário da computação moderna, ao defender soluções práticas, abertas e acessíveis a todos.</p>
     </div>
   </section>
 
-  <section id="delphi">
-    <h2>A Revolução do Delphi</h2>
+  <section>
+    <h2>Delphi – A Revolução no Desenvolvimento</h2>
     <div class="highlight">
-      <p>O Delphi foi uma inovação criada pela Borland em 1995. Era mais que uma linguagem de programação: era uma IDE poderosa baseada no Object Pascal, projetada para criar aplicações Windows de forma rápida e visual.</p>
-      <p>Com o Delphi, surgiram conceitos como RAD (Desenvolvimento Rápido de Aplicações), integração com bancos de dados, e a famosa biblioteca VCL.</p>
-      <p>Entre as versões mais marcantes:</p>
+      <p>O Delphi foi mais que um produto: foi uma revolução. Lançado em 1995, ele unificou uma linguagem poderosa (Object Pascal) com um ambiente de desenvolvimento visual rápido e moderno. Com ele, era possível criar softwares robustos para Windows de forma intuitiva e eficiente.</p>
+      <p>Ao longo dos anos, o Delphi evoluiu continuamente:</p>
       <ul>
-        <li><strong>Delphi 1.0 (1995):</strong> nascimento da ferramenta.</li>
-        <li><strong>Delphi 2.0 (1996):</strong> suporte ao Windows 32 bits.</li>
-        <li><strong>Delphi 3 e 4:</strong> melhorias em depuração, interface modular e suporte a ActionLists.</li>
-        <li><strong>Delphi 5 (1999):</strong> suporte a XML, ADO, localização de software e muito mais.</li>
+        <li><strong>Delphi 1.0 (1995):</strong> lançamento com foco em produtividade e RAD.</li>
+        <li><strong>Delphi 2.0:</strong> suporte ao Windows 32 bits e melhorias de performance.</li>
+        <li><strong>Delphi 3 (1997):</strong> aprimoramento da VCL e suporte a novas arquiteturas de dados.</li>
+        <li><strong>Delphi 4 e 5:</strong> novas features como depuração de DLLs, suporte a XML, ActionLists e muito mais.</li>
       </ul>
-      <p>Hoje o Delphi é mantido pela Embarcadero, mas sua origem continua sendo sinônimo de produtividade e inovação.</p>
+      <p>Hoje, o Delphi ainda é utilizado em milhares de empresas e sua influência pode ser vista até nas linguagens modernas como C# – criada por Anders Hejlsberg, o "pai" do Delphi.</p>
     </div>
   </section>
 
-  <section id="legado">
-    <h2>Legado da Borland</h2>
+  <section>
+    <h2>A Filosofia Borland</h2>
     <div class="highlight">
-      <p>A Borland transformou o mundo do desenvolvimento de software. De pequenas ferramentas acessíveis até IDEs corporativas robustas, a empresa moldou o futuro da computação pessoal e inspirou milhares de profissionais ao redor do mundo.</p>
-      <p>Seu impacto pode ser visto em cada app que usamos, em cada linguagem moderna, e em cada linha de código escrita com rapidez e elegância. A Borland vive na inovação que ela ajudou a lançar.</p>
+      <p>Mais do que software, a Borland defendia uma visão de mundo: liberdade criativa para desenvolvedores, acesso democrático à tecnologia e desenvolvimento centrado no ser humano.</p>
+      <p>Com uma gestão ousada e cultura diferenciada, a empresa adotou uma abordagem horizontal, incentivando colaboração e inovação interna – algo raro na indústria na década de 1980.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Legado e Impacto</h2>
+    <div class="highlight">
+      <p>A Borland não apenas criou ferramentas, ela moldou gerações. Seu impacto está presente nos fundamentos da engenharia de software moderna. Foi responsável por difundir o conceito de RAD (Desenvolvimento Rápido de Aplicações), pelo fortalecimento do Pascal como linguagem profissional e por fomentar uma comunidade ativa de desenvolvedores.</p>
+      <p>Mesmo após a venda de produtos como o Delphi e a transição da empresa, seu legado permanece vivo: em cada IDE visual, em cada componente reutilizável, em cada desenvolvedor que começou sua carreira usando o Turbo Pascal ou o Delphi.</p>
     </div>
   </section>
 
   <footer>
-    <p>© 2025 - Homenagem à Borland International, Inc.</p>
+    <p>© 2025 – Homenagem à Borland International, Inc. | Feito com ❤️ para fins educacionais</p>
   </footer>
 
 </body>
