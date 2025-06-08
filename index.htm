@@ -1,100 +1,97 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Borland</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Borland – História de Inovação</title>
   <style>
-    body {
+    :root {
+      --primary: #0a192f;
+      --secondary: #112240;
+      --accent: #64ffda;
+      --text: #ccd6f6;
+      --bg-light: #f9f9f9;
+      --white: #ffffff;
+    }
+
+    * {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f0f0f0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-light);
+      color: var(--primary);
+      line-height: 1.6;
     }
 
     header {
-      background: #fff;
-      padding: 15px 20px;
-      position: sticky;
-      top: 0;
-      border-bottom: 1px solid #ddd;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    header h1 {
-      color: #1d4ed8;
-      font-size: 24px;
-    }
-
-    nav a {
-      margin-left: 15px;
-      text-decoration: none;
-      color: #333;
-    }
-
-    .hero {
-      background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-      color: white;
-      padding: 60px 20px;
+      background: var(--primary);
+      color: var(--text);
+      padding: 20px;
       text-align: center;
     }
 
-    .hero h2 {
-      font-size: 30px;
+    header h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+      color: var(--accent);
+    }
+
+    header p {
+      font-size: 16px;
+      color: var(--text);
     }
 
     section {
-      padding: 40px 20px;
-      background: white;
-      margin: 20px;
-      border-radius: 8px;
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
     }
 
-    .services div {
+    section h2 {
+      font-size: 28px;
+      color: var(--primary);
       margin-bottom: 20px;
+      border-bottom: 2px solid var(--accent);
+      display: inline-block;
+    }
+
+    .timeline {
+      border-left: 4px solid var(--accent);
+      padding-left: 20px;
+      margin-left: 10px;
+    }
+
+    .timeline p {
+      margin-bottom: 25px;
+    }
+
+    .highlight {
+      background: var(--white);
+      padding: 20px;
+      border-left: 5px solid var(--accent);
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      margin-bottom: 40px;
     }
 
     footer {
-      background: #111;
-      color: #ccc;
+      background: var(--primary);
+      color: var(--text);
       text-align: center;
       padding: 20px;
       margin-top: 40px;
     }
 
-    #menuToggle {
-      display: none;
-    }
-
-    #backToTop {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #1d4ed8;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      font-size: 20px;
-      display: none;
-      cursor: pointer;
-    }
-
     @media (max-width: 600px) {
-      nav {
-        display: none;
-        flex-direction: column;
+      header h1 {
+        font-size: 28px;
       }
 
-      #menuToggle {
-        display: inline;
-        font-size: 20px;
-        cursor: pointer;
-      }
-
-      nav.show {
-        display: flex;
+      section h2 {
+        font-size: 24px;
       }
     }
   </style>
@@ -103,69 +100,53 @@
 
   <header>
     <h1>Borland</h1>
-    <span id="menuToggle">☰</span>
-    <nav id="navMenu">
-      <a href="#inicio">Início</a>
-      <a href="#servicos">Serviços</a>
-      <a href="#sobre">Sobre</a>
-    </nav>
+    <p>Uma revolução silenciosa no mundo da computação pessoal</p>
   </header>
 
-  <div class="hero" id="inicio">
-    <h2>Soluções Empresariais</h2>
-    <p>Transformamos desafios em oportunidades com tecnologia.</p>
-  </div>
-
-  <section id="servicos" class="services">
-    <h3>Serviços</h3>
-    <div>
-      <strong>Desenvolvimento de Software</strong>
-      <p>Automatize processos com sistemas sob medida.</p>
-    </div>
-    <div>
-      <strong>Consultoria Empresarial</strong>
-      <p>Melhore a gestão e cresça com estratégia.</p>
-    </div>
-    <div>
-      <strong>Inteligência Artificial</strong>
-      <p>Use IA para tomar decisões com base em dados.</p>
+  <section id="historia">
+    <h2>História da Empresa</h2>
+    <div class="timeline">
+      <p><strong>1983:</strong> Philippe Kahn funda a Borland International, Inc., após emigrar da França para o Vale do Silício com apenas US$ 2.000.</p>
+      <p><strong>Anos 80:</strong> A Borland cresce vendendo ferramentas acessíveis para programadores, como o Turbo Pascal, e torna-se referência entre desenvolvedores.</p>
+      <p><strong>Anos 90:</strong> Com aquisições estratégicas e um estilo de gestão inovador, a Borland migra para o mercado corporativo e se torna a terceira maior empresa de software do mundo.</p>
     </div>
   </section>
 
-  <section id="sobre">
-    <h3>Sobre Nós</h3>
-    <p>A Borland existe desde 2010, entregando soluções que ajudam empresas a crescer usando tecnologia moderna.</p>
+  <section id="fundador">
+    <h2>Philippe Kahn</h2>
+    <div class="highlight">
+      <p>Philippe Kahn (1952–2025) foi um engenheiro e inventor francês. Fundador da Borland, é reconhecido por criar o primeiro telefone com câmera integrado em 1997, permitindo o compartilhamento instantâneo de imagens – algo que se tornaria base para os smartphones e redes sociais modernas.</p>
+      <p>Além de empreendedor visionário, Kahn também foi um defensor do acesso acessível à tecnologia, pavimentando o caminho para milhares de desenvolvedores no mundo todo.</p>
+    </div>
+  </section>
+
+  <section id="delphi">
+    <h2>A Revolução do Delphi</h2>
+    <div class="highlight">
+      <p>O Delphi foi uma inovação criada pela Borland em 1995. Era mais que uma linguagem de programação: era uma IDE poderosa baseada no Object Pascal, projetada para criar aplicações Windows de forma rápida e visual.</p>
+      <p>Com o Delphi, surgiram conceitos como RAD (Desenvolvimento Rápido de Aplicações), integração com bancos de dados, e a famosa biblioteca VCL.</p>
+      <p>Entre as versões mais marcantes:</p>
+      <ul>
+        <li><strong>Delphi 1.0 (1995):</strong> nascimento da ferramenta.</li>
+        <li><strong>Delphi 2.0 (1996):</strong> suporte ao Windows 32 bits.</li>
+        <li><strong>Delphi 3 e 4:</strong> melhorias em depuração, interface modular e suporte a ActionLists.</li>
+        <li><strong>Delphi 5 (1999):</strong> suporte a XML, ADO, localização de software e muito mais.</li>
+      </ul>
+      <p>Hoje o Delphi é mantido pela Embarcadero, mas sua origem continua sendo sinônimo de produtividade e inovação.</p>
+    </div>
+  </section>
+
+  <section id="legado">
+    <h2>Legado da Borland</h2>
+    <div class="highlight">
+      <p>A Borland transformou o mundo do desenvolvimento de software. De pequenas ferramentas acessíveis até IDEs corporativas robustas, a empresa moldou o futuro da computação pessoal e inspirou milhares de profissionais ao redor do mundo.</p>
+      <p>Seu impacto pode ser visto em cada app que usamos, em cada linguagem moderna, e em cada linha de código escrita com rapidez e elegância. A Borland vive na inovação que ela ajudou a lançar.</p>
+    </div>
   </section>
 
   <footer>
-    <p>© 2023 Borland. Todos os direitos reservados.</p>
+    <p>© 2025 - Homenagem à Borland International, Inc.</p>
   </footer>
 
-  <button id="backToTop">↑</button>
-
-  <script>
-    // Menu Mobile
-    const toggleBtn = document.getElementById('menuToggle');
-    const navMenu = document.getElementById('navMenu');
-
-    toggleBtn.addEventListener('click', () => {
-      navMenu.classList.toggle('show');
-    });
-
-    // Botão "Voltar ao Topo"
-    const backToTopBtn = document.getElementById('backToTop');
-
-    window.addEventListener('scroll', () => {
-      if (window.pageYOffset > 300) {
-        backToTopBtn.style.display = 'block';
-      } else {
-        backToTopBtn.style.display = 'none';
-      }
-    });
-
-    backToTopBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  </script>
 </body>
 </html>
