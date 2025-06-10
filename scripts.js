@@ -1,4 +1,4 @@
-const toggleBtn = document.getElementById("menu-toggle");Add commentMore actions
+const toggleBtn = document.getElementById("menu-toggle");
 const navMenu = document.getElementById("nav-menu");
 
 toggleBtn.addEventListener("click", () => {
