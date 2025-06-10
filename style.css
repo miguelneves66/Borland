@@ -142,6 +142,7 @@ footer {
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     width: 200px;
     margin-left: 0;
+    z-index: 1100;
   }
 
   .nav-menu.active {
