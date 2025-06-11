@@ -89,15 +89,30 @@ p {
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
+.timeline-container {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.timeline-img {
+  max-width: 400px;
+  flex: 1 1 300px;
+}
+
 .timeline {
   border-left: 4px solid #00bcd4;
   padding-left: 30px;
   margin-top: 20px;
   position: relative;
+  flex: 2 1 500px;
 }
 
 .timeline-event {
   margin-bottom: 25px;
+  padding-left: 15px;
+  border-left: 3px solid #ccc;
   position: relative;
 }
 
@@ -106,15 +121,23 @@ p {
   width: 14px;
   height: 14px;
   background: #00bcd4;
+  border: 3px solid white;
+  box-shadow: 0 0 0 2px #00bcd4;
   border-radius: 50%;
   position: absolute;
-  left: -37px;
+  left: -42px;
   top: 5px;
 }
 
 .timeline-event h4 {
-  margin-bottom: 4px;
+  margin-bottom: 6px;
+  font-size: 18px;
   color: #005b7a;
+}
+
+.timeline-event p {
+  margin: 0 0 10px;
+  color: #333;
 }
 
 footer {
@@ -151,5 +174,14 @@ footer {
 
   .nav-menu li {
     margin: 10px 0;
+  }
+
+  .timeline-container {
+    flex-direction: column;
+  }
+
+  .timeline-img {
+    margin-bottom: 20px;
+    max-width: 100%;
   }
 }
